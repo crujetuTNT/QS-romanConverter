@@ -8,8 +8,17 @@
         gtag('js', new Date());
 
         gtag('config', 'G-5XV2H8BH2T');
+        
       </script>
     <script src="romans.js"></script>
+    <script>
+      var convertButton = document.querySelector('.convert-button');
+      convertButton.addEventListener('click', function() {
+        gtag('event','try_to_convert_clicked', {
+            'conversion_clicked': false
+          });
+      });
+    </script>
     <link rel="stylesheet" href="romans.css">
   </head>
   <body onload="init()">
