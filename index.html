@@ -8,16 +8,13 @@
         gtag('js', new Date());
 
         gtag('config', 'G-5XV2H8BH2T');
-        
+        document.getElementsByClassName("convert-button")[0].addEventListener("click", function ()
+        {
+          gtag('event','try_to_convert_clicked');
+          console.log("Click en convert oldschool");
+        });
       </script>
     <script src="romans.js"></script>
-    <script>
-      document.getElementsByClassName("convert-button")[0].addEventListener("click", function ()
-      {
-        gtag('event','try_to_convert_clicked');
-        console.log("Click en convert oldschool");
-      });
-    </script>
     <link rel="stylesheet" href="romans.css">
   </head>
   <body onload="init()">
