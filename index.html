@@ -17,9 +17,14 @@
         gtag('event','try_to_convert_clicked');
         console.log("Click en convert oldschool");
       }
-      var convertButton = document.querySelector('.convert-button');
-      document.getElementsByClassName("convertButton").addEventListener("click", googleEvent);
-      
+      var convertButton = document.getElementsByClassName("convertButton");
+      convertButton.addEventListener("click", googleEvent);
+      for(var i = 0; i < convertButton.length; i++) {
+        (function(index) {
+          convertButton[index].addEventListener("click", function() {
+             googleEvent();
+           })
+        })(i);
     </script>
     <link rel="stylesheet" href="romans.css">
   </head>
