@@ -12,11 +12,14 @@
       </script>
     <script src="romans.js"></script>
     <script>
+      function googleEvent()
+      {
+        gtag('event','try_to_convert_clicked');
+        console.log("Click en convert oldschool");
+      }
       var convertButton = document.querySelector('.convert-button');
-      convertButton.addEventListener('click', function() {
-        gtag('event','try_to_convert_clicked', {});
-        console.log("Click en convert");
-      });
+      document.getElementByClass("convertButton").addEventListener("click", googleEvent);
+      
     </script>
     <link rel="stylesheet" href="romans.css">
   </head>
